@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AmazonTestSuite">
+    <test name="AmazonLoginTest">
+        <parameter name="browser" value="chrome" /><!--browser seçmek için parameteri burdan yolluyoruz-->
+        <parameter name="searchText" value="laptop" /><!--Arama yapılacak text değerini buradan yolluyoruz-->
+        <parameter name="index" value="3" /><!--sayfadaki gelen ögelerin hangi index seçilecekse onu gönderiyoruz-->
+        <classes>
+            <class name="com.amazon.test.login.LoginSearchTest"/>
+            <class name="com.amazon.test.login.LoginCartTest"/>
+            <!-- <class name="com.amazon.test.login.LoginCartTest"></class>--> <!--Loginden sonra arama-->
+            <!-- <class name="com.amazon.test.LoginPageTest"></class>--> <!--Tüm login işlemleri kontrolü-->
+            <!-- çalıştırmak istediğiniz testi classes içine yazınız.
+            Diğer testleri bu şekilde yorum satırına alabilirsiniz-->
+            <!-- <class name="com.amazon.test.AmazonTest" />
+             <class name="com.amazon.test.SearchResultPageTest" />-->
+        </classes>
+    </test>
+</suite>

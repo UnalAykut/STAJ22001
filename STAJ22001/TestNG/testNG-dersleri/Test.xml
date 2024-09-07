@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Örnekleri" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+    </listeners>
+    <test name="Test On Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="examples.com.test.MyTestClassXml"></class>
+        </classes>
+    </test>
+    <test name="Test On Edge">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="examples.com.test.MyTestClassXml"></class>
+        </classes>
+    </test>
+
+</suite>
